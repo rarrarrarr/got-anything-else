@@ -23,6 +23,20 @@ its whole conversation, so this uses a lot of tokens quickly.
 
 Tested on Windows with VS Code and Claude Code 2.1.332. `python got_anything_else.py --help` lists every option.
 
+## Typing the question by hand
+
+[`hotkey/gae.ahk`](hotkey/gae.ahk) is an AutoHotkey v2 script: typing `gae`
+followed by a space turns it into `anything else you want to say before I archive this session?`.
+To have it start every time you sign in:
+
+```powershell
+.\hotkey\install-startup.ps1              # add a Startup shortcut and start it now
+.\hotkey\install-startup.ps1 -Uninstall   # remove the shortcut
+```
+
+The shortcut points at the script in this repo, so run the installer again if
+you move the repo.
+
 ## Gotchas
 
 - **Relies on undocumented internals.** The archived list comes from the
